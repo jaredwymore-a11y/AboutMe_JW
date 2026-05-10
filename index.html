@@ -1,226 +1,53 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>About Me – HTML Forms</title>
-    <!-- CMPSC 3323 - Assignment 5 - HTML Forms -->
-    <!-- Last Updated: May 3, 2026 -->
-    <link rel="stylesheet" href="Wymore_formstyles.css">
-    <script src="Wymore_forms.js"></script>
+    <title>Jared Wymore – About Me</title>
+    <link rel="stylesheet" href="styles.css">
   </head>
-  <body bgcolor="#add8e6" text="#222222">
+  <body>
 
-    <!-- ECU Logo -->
-    <div align="center">
-      <img src="ecu-logo.png" alt="ECU Logo" width="100">
-    </div>
+    <!Top Menu>
+    <header class="top-nav">
+      <div class="nav-logo">
+        <img src="ecu-logo.png" alt="ECU Logo" height="50">
+      </div>
+      <nav class="nav-links">
+        <a href="index.html" class="active">Home</a>
+        <a href="about.html">About Me</a>
+        <a href="classes.html">Classes</a>
+        <a href="resume.html">Resume</a>
+      </nav>
+    </header>
 
-    <!-- Page Nav -->
-    <nav>
-      <h1 align="center"><font face="Arial, sans-serif">Page Navigation</font></h1>
-      <ul>
-        <font face="Arial, sans-serif" size="3">
-          <li><a href="#about">About Me</a></li>
-          <li><a href="#classes">Classes</a></li>
-          <li><a href="#hobbies">Hobbies</a></li>
-          <li><a href="#forms">Forms</a></li>
-        </font>
-      </ul>
-    </nav>
-
-    <!-- About Me -->
-    <section id="about">
-      <h1 align="center"><font color="green" face="Arial, sans-serif">About Me</font></h1>
-      <font face="Arial, sans-serif" size="3">
-        <p><b>My name is Jared Wymore.</b></p>
-        <p><i>My major is Computer Science.</i></p>
-        <p><u>I am a senior.</u></p>
-        <!-- Family Photo -->
-        <div align="center">
-          <img src="IMG_2666.jpeg" alt="Me and My Family" width="400">
-        </div>
-      </font>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <h1>Jared Wymore</h1>
+        <p class="hero-sub">Computer Science Senior &mdash; East Central University</p>
+    
     </section>
 
-    <!-- Classes -->
-    <section id="classes">
-      <h1 align="center"><font color="green" face="Arial, sans-serif">Classes</font></h1>
-      <font face="Arial, sans-serif" size="3">
-        <p>This semester I am taking the following classes:</p>
-        <div class="container">
-          <div class="grid-1">
-            <h2>CMPSC 3323 - Internet Programming</h2>
-            <p>Internet programming covers several internet programming languages such as HTML and CSS. This class is a good foundation for someone wanting to build their website.</p>
-          </div>
-          <div class="grid-2">
-            <h2>CMPSC 4213 - Data Base Design</h2>
-            <p>Database Design is about the different types of relationships within databases. This course also talks about the importance of data integrity. This has helped in my new career as a software developer.</p>
-          </div>
-          <div class="grid-3">
-            <h2>CPSMA 3103 - Algorithm Analysis</h2>
-            <p>This course helps me understand how various algorithms work, especially sorting algorithms. This has helped my critical thinking skills when it comes to caring about how much time a program will take.</p>
-          </div>
-          <div class="grid-4">
-            <h2>CPSMA 3913 - Discrete Mathematics</h2>
-            <p>This course talks about sets and proofs to show whether or not items have an elemental relationship. This helped me with problem solving.</p>
-          </div>
-        </div>
-      </font>
-    </section>
+    <!-- Quick Links Grid -->
+    <main class="home-grid-section">
+      <h2 class="section-title">Explore My Site</h2>
+      <div class="home-grid">
+        <a href="about.html" class="home-card">
+ 
+          <h3>About Me</h3>
+        </a>
+        <a href="classes.html" class="home-card">
+          <h3>Classes</h3>
+        
+        <a href="resume.html" class="home-card">
+          <h3>Resume</h3>
+        </a> </a>
+      </div>
+    </main>
 
-    <!-- Hobbies -->
-    <section id="hobbies">
-      <h1 align="center"><font color="green" face="Arial, sans-serif">Hobbies</font></h1>
-      <font face="Arial, sans-serif" size="3">
-        <ul>
-          <li>Watching movies</li>
-          <li>Playing with my kids</li>
-          <li>Spending time with family</li>
-        </ul>
-        <p>Here is one of my favorite movie fight scenes:</p>
-        <div align="center">
-          <iframe width="560" height="315"
-            src="https://www.youtube.com/watch?v=qo__6MZIg6U"
-            title="Darth Maul Fight"
-            frameborder="0"
-            allowfullscreen>
-          </iframe>
-        </div>
-      </font>
-    </section>
-
-    <! Forms-->
-    <section id="forms">
-      <h1 align="center"><font color="green" face="Arial, sans-serif">Interactive Forms</font></h1>
-      <font face="Arial, sans-serif" size="3">
-
-        <!-- 2x2 Grid-->
-        <div class="container forms-grid">
-
-          <!--Op Calculator -->
-          <div class="grid-1 form-tile">
-            <h2>Calculator</h2>
-            <p>Enter two numbers to calculate using the selected operator.</p>
-            <form id="arithmeticForm" onsubmit="Mathcalc(event)">
-              <label for="arith1">Number 1:</label>
-              <input type="number" id="arith1" placeholder="example 20" required><br><br>
-
-              <label for="arith2">Number 2:</label>
-              <input type="number" id="arith2" placeholder="example 24" required><br><br>
-
-              <fieldset class="radio-group">
-               
-                <label><input type="radio" name="OP" value="+" required> Add +</label>
-                <label><input type="radio" name="OP" value="-"> Subtract −</label>
-                <label><input type="radio" name="OP" value="*"> Multiply ×</label>
-                <label><input type="radio" name="OP" value="/"> Divide ÷</label>
-              </fieldset><br>
-
-              <button type="submit" class="btn-primary">Calculate</button>
-            </form>
-            <div id="Mathcalc-output" class="output-div"></div>
-          </div>
-
-          <!-- Get Factorial -->
-          <div class="grid-2 form-tile">
-            <h2>Calculate Entry Factorial</h2>
-            <p>Enter a positive number to calculate its factorial or n!.</p>
-            <form id="factorialForm" onsubmit="GetFact(event)">
-              <label for="factNum">Integer (n):</label>
-              <input type="number" id="factNum" placeholder="e.g. 7" min="0" required><br><br>
-
-              <button type="submit" class="btn-primary">Calculate n!</button>
-            </form>
-            <div id="output-factorial" class="output-div"></div>
-          </div>
-
-          <!-- Grid 3-->
-          <div class="grid-3 form-tile">
-            <h2></h2>
-            <p>Type a value to output the Fibonacci number in the entered position.</p>
-            <form id="fibForm" onsubmit="calcFib(event)">
-              <label for="fibN">Position (N):</label>
-              <input type="number" id="fibN" placeholder="example '5' would be f(5)=5" required><br><br>
-
-              <button type="submit" class="btn-primary">Get Fibonacci</button>
-            </form>
-            <div id="output-fib" class="output-div"></div>
-          </div>
-
-          <!-- Grid 4-->
-          <div class="grid-4 form-tile">
-            <h2></h2>
-            <p>Find the max,min, and range of three entered numbers.</p>
-            <form id="mmrForm" onsubmit="calcMMR(event)">
-              <label for="mmr1">Number 1:</label>
-              <input type="number" id="mmr1" placeholder="example.. enter: 4" required><br><br>
-
-              <label for="mmr2">Number 2:</label>
-              <input type="number" id="mmr2" placeholder="example.. enter: 9" required><br><br>
-
-              <label for="mmr3">Number 3:</label>
-              <input type="number" id="mmr3" placeholder="example.. enter: 11" required><br><br>
-
-              <button type="submit" class="btn-primary">Calculate</button>
-            </form>
-            <div id="output-mmr" class="output-div"></div>
-          </div>
-
-        </div>
-
-        <!-- Grid 5-->
-        <div class="container">
-          <div class="grid-5-full form-tile">
-            <h2>Mailing List</h2>
-            <p>Enter your information to join our mailing list.</p>
-
-            <form id="mailingListForm" onsubmit="submitmail(event)">
-              <div class="mailing-fields">
-
-                <div class="field-group">
-                  <label for="first">First Name:</label>
-                  <input type="text" id="first" placeholder="John" required>
-                </div>
-
-                <div class="field-group">
-                  <label for="last">Last Name:</label>
-                  <input type="text" id="last" placeholder="Doe" required>
-                </div>
-
-                <div class="field-group">
-                  <label for="email">Email Address:</label>
-                  <input type="email" id="email" placeholder="John@AOL.com" required>
-                </div>
-
-                <div class="field-group">
-                  <label for="zip">ZIP Code:</label>
-                  <input type="text" id="zip" placeholder="12345" maxlength="5" pattern="[0-9]{5}" title="Enter a five digit zip." required>
-                </div>
-
-              </div>
-
-              <div class="mailing-buttons">
-                <button type="submit" class="btn-primary">Submit</button>
-                <button type="reset" class="btn-reset">Clear Info</button>
-              </div>
-            </form>
-
-            <!-- Shows mailing list.-->
-            <div id="mailing-output" class="mailing-output-div">
-              <h3 style="color: black;">Mailing List Entries:</h3>
-              <div id="mailing-entries"></div>
-            </div>
-
-          </div>
-        </div>
-
-      </font>
-    </section>
-
-
-    <!-- ECU Homepage -->
-    <font face="Arial, sans-serif" size="3">
-      <p><a href="https://ecok.edu/" target="_blank">ECU Homepage</a></p>
-    </font>
+    <!-- Footer -->
+    <footer class="site-footer">
+      <p><a href="https://ecok.edu/" target="_blank">ECU Homepage</a> &nbsp;&nbsp;</p>
+    </footer>
 
   </body>
 </html>
